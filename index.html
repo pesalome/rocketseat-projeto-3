@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Crie e compartilhe seu evento.</h1>
+        <p1>O primeiro passo, é preencher esse formulário de inscrição.</p1>
+    </header>
+    <form id="my-form">
+            
+            <fieldset>
+                <legend>Informações do Evento</legend>
+                <div class="input-wrapper">
+                    <label for="event-title"> Título do evento <span>(mínimo 8 caracteres)</span> </label>
+                    <input minlength="8" id="event-title" type="text">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-link"> Link do evento <span>(comece com https://)</span> </label>
+                    <input id="event-link" type="url">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-number"> Whatsapp para contato <span>(somente números)</span> </label>
+                    <input id="event-number" type="number">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-description"> Informações extras </label>
+                    <input id="event-description" type="text">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-select"> Categoria </label>
+                        <select id="event-select">
+                            <option value="Live">Live</option>
+                            <option value="Podcast">Podcast</option>
+                            <option value="Mentorship">Mentorship</option>
+                        </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Privacidade</legend>
+                <div class="input-wrapper">
+                    <label for="event-email"> E-mail do administrador <span>(digite um email válido)</span> </label>
+                    <input id="event-email" type="email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="event-password"> Senha de acesso para os participantes <span>(mínimo 8 caracteres)</span> </label>
+                    <input minlength="8" id="event-password" type="password">
+                </div>
+                <div class="private-wrapper">
+                    <input id="event-private" type="checkbox">
+                    <label for="event-private">Evento privado</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dia e hora</legend>
+                <div id="datatime">
+                    <div class="input-wrapper">
+                        <label for="event-time"> Data </label>
+                        <input id="event-time" type="date">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-begin"> Das </label>
+                        <input id="event-begin" type="time">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="event-end"> Até </label>
+                        <input id="event-end" type="time">
+                    </div>
+                </div>
+            </fieldset>
+    </form>
+    <footer>
+        <input form="my-form" type="submit" value="Salvar evento"></input>
+    </footer>
+
+    
+</body>
+</html>
